@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Bootstrap na prática</title>
+     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="styles/animate.css">
+     <link rel="stylesheet" href="styles/main.css">
+   </head>
+   <body>
+      <header>
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+               <a href="#home" class="navbar-brand">Caelum</a>
+               <button class="navbar-toggle" type="button" data-target=".navbar-collapse" data-toggle="collapse">Menu</button>
+            </div> <!-- nav-header -->
+            <div class="collapse navbar-collapse navbar-right">
+               <ul class="nav navbar-nav">
+                   <li><a href="#novidades">Novidades</a></li>
+                   <li><a href="#maisVendidos">Mais vendidos</a></li>
+                   <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Camisetas
+                     <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Masculino</a></li>
+                        <li><a href="#">Feminino</a></li>
+                        <li><a href="#">Infantil</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <form action="" class="navbar-form navbar-right">
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Digite o que você procura" />
+                     <input type="submit" class="btn btn-default" value="Buscar">
+                  </div>
+               </form>
+            </div>
+
+         </nav>
+      </header>
+
+      <main>
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-sm-4">
+                  <img src="images/produto.png" class="img-responsive img-thumbnail" alt="camisa azul">
+               </div>
+
+            </div>
+         </div> <!-- container-fluid -->
+
+      </main>
+
+      <footer>
+         <p>avenida paulista n1</p>
+         <p>tel: 2512-1234</p>
+      </footer>
+
+
+      <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+      <script src="scripts/wow.min.js"></script>
+      <script>
+      $(function(){
+         new WOW().init();
+      });
+
+      </script>
+   </body>
+</html>

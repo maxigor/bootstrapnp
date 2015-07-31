@@ -5,19 +5,20 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <title>Bootstrap na prática</title>
      <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="styles/animate.css">
      <link rel="stylesheet" href="styles/main.css">
    </head>
    <body>
       <header>
          <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-header">
-               <a href="#" class="navbar-brand">Caelum</a>
+               <a href="#home" class="navbar-brand">Caelum</a>
                <button class="navbar-toggle" type="button" data-target=".navbar-collapse" data-toggle="collapse">Menu</button>
             </div> <!-- nav-header -->
             <div class="collapse navbar-collapse navbar-right">
                <ul class="nav navbar-nav">
-                   <li><a href="#">Novidades</a></li>
-                   <li><a href="#">Mais vendidos</a></li>
+                   <li><a href="#novidades">Novidades</a></li>
+                   <li><a href="#maisVendidos">Mais vendidos</a></li>
                    <li class="dropdown">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Camisetas
                      <span class="caret"></span></a>
@@ -41,8 +42,9 @@
 
       <main>
          <div class="container-fluid">
-            <div class="row">
-               <div class="carousel slide" data-ride="carousel">
+            <div class="row" id="home">
+
+               <div id="carousel" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner" role="listbox">
                      <div class="item active">
                         <img class="fullscreen" src="images/banner1.jpg" alt="moda">
@@ -52,44 +54,138 @@
                         <img class="fullscreen" src="images/banner2.jpg" alt="moda infantil">
                      </div>
                   </div> <!-- carousel inner-->
+                  <a href="#carousel" class="left carousel-control" data-slide="prev">
+                     <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a href="#carousel" class="right carousel-control" data-slide="next">
+                     <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
                </div> <!-- carousel slide -->
+
             </div> <!-- row -->
          </div> <!-- container-fluid -->
 
-         <h3 class="text-center">Novidades</h3>
-         <div class="col-xs-12 col-md-4 thumbnail text-center">
-            <figure>
-               <img src="images/camisa-azul.png" alt="camisa azul importada">
-               <h4>Camisa azul importada</h4>
-               <p>Camisa azul aimportada pro um preço acessivel e com pano de qualidade</p>
+         <div class="container-fluid">
+         <div class="row">
+            <div class="col-xs-12 col-sm-3">
+               <div class="text-center">
+                  <h3>Categorias</h3>
+               </div>
+               <ul class="list-group">
+                  <li class="list-group-item list-group-item-success"><a href="#">Camisetas Masculinas</a></li>
+                  <li class="list-group-item list-group-item-info"><a href="#">Camisetas Femininas</a></li>
+                  <li class="list-group-item list-group-item-warning"><a href="#">Camisetas Inferno</a></li>
+                  <li class="list-group-item list-group-item-danger"><a href="#">Camisetas Verão</a></li>
+               </ul>
+            </div>
 
-            </figure>
-            <a class="btn btn-default" href="#">R$190,00</a>
-            <a class="btn btn-primary" href="#">Comprar <span class="glyphicon glyphicon-shopping-cart"></span></a>
-         </div>
+            <div class="col-xs-12 col-sm-9">
+               <h3 class="text-center" id="novidades">Novidades</h3>
+               <div class="col-xs-12 col-md-3 thumbnail text-center wow slideInLeft" data-wow-delay="0.5s">
+                  <figure>
+                     <img src="images/camisa-azul.png" alt="camisa azul importada">
+                     <h4>Camisa azul importada</h4>
+                     <p>Camisa azul aimportada pro um preço acessivel e com pano de qualidade</p>
+                  </figure>
 
-         <div class="col-xs-12 col-md-4 thumbnail text-center">
-            <figure>
-               <img src="images/camisa-rosa.png" alt="camisa rosa importada">
-               <h4>Camisa rosa importada</h4>
-               <p>camisa rosa argentina por um preço acessível e com pano de qualidade.</p>
-            </figure>
-            <a class="btn btn-default" href="#">R$190,00</a>
-            <a class="btn btn-primary" href="#">Comprar <span class="glyphicon glyphicon-shopping-cart"></span></a>
-         </div>
+                  <a class="btn btn-default" href="#">R$190,00</a>
+                  <a class="btn btn-primary" href="#">Comprar <span class="glyphicon glyphicon-shopping-cart"></span></a>
+               </div>
 
-         <div class="col-xs-12 col-md-4 thumbnail text-center">
-            <figure>
-               <img src="images/camisa-azul.png" alt="camisa rosa importada">
-               <h4>Camisa rosa importada</h4>
-               <p>camisa rosa argentina por um preço acessível e com pano de qualidade.</p>
-            </figure>
-            <a class="btn btn-default" href="#">R$190,00</a>
-            <a class="btn btn-primary" href="#">Comprar <span class="glyphicon glyphicon-shopping-cart"></span></a>
-         </div>
+               <div class="col-xs-12 col-md-3 thumbnail text-center wow slideInLeft" data-wow-delay="0.5s">
+                  <figure>
+                     <img src="images/camisa-rosa.png" alt="camisa rosa importada">
+                     <h4>Camisa rosa importada</h4>
+                     <p>camisa rosa argentina por um preço acessível e com pano de qualidade.</p>
+                  </figure>
+
+                  <a class="btn btn-default" href="#">R$190,00</a>
+                  <a class="btn btn-primary" href="#">Comprar <span class="glyphicon glyphicon-shopping-cart"></span></a>
+               </div>
+
+               <div class="col-xs-12 col-md-3 thumbnail text-center wow slideInLeft" data-wow-delay="0.5s">
+                  <figure>
+                     <img src="images/camisa-azul.png" alt="camisa rosa importada">
+                     <h4>Camisa rosa importada</h4>
+                     <p>camisa rosa argentina por um preço acessível e com pano de qualidade.</p>
+                  </figure>
+                  <a class="btn btn-default" href="#">R$190,00</a>
+                  <a class="btn btn-primary" href="#">Comprar <span class="glyphicon glyphicon-shopping-cart"></span></a>
+               </div>
+
+               <div class="col-xs-12 col-md-3 thumbnail text-center wow slideInLeft" data-wow-delay="0.5s">
+                  <figure>
+                     <img src="images/camisa-azul.png" alt="camisa rosa importada">
+                     <h4>Camisa rosa importada</h4>
+                     <p>camisa rosa argentina por um preço acessível e com pano de qualidade.</p>
+                  </figure>
+                  <a class="btn btn-default" href="#">R$190,00</a>
+                  <a class="btn btn-primary" href="#">Comprar <span class="glyphicon glyphicon-shopping-cart"></span></a>
+               </div>
+
+
+               <h3 class="text-center" id="maisVendidos">Mais Vendidos</h3>
+               <div class="col-xs-12 col-md-3 thumbnail text-center wow slideInLeft" data-wow-delay="0.5s">
+                  <figure>
+                     <img src="images/camisa-azul.png" alt="camisa azul importada">
+                     <h4>Camisa azul importada</h4>
+                     <p>Camisa azul aimportada pro um preço acessivel e com pano de qualidade</p>
+                  </figure>
+
+                  <a class="btn btn-default" href="#">R$190,00</a>
+                  <a class="btn btn-primary" href="#">Comprar <span class="glyphicon glyphicon-shopping-cart"></span></a>
+               </div>
+
+               <div class="col-xs-12 col-md-3 thumbnail text-center wow slideInLeft" data-wow-delay="0.5s">
+                  <figure>
+                     <img src="images/camisa-rosa.png" alt="camisa rosa importada">
+                     <h4>Camisa rosa importada</h4>
+                     <p>camisa rosa argentina por um preço acessível e com pano de qualidade.</p>
+                  </figure>
+
+                  <a class="btn btn-default" href="#">R$190,00</a>
+                  <a class="btn btn-primary" href="#">Comprar <span class="glyphicon glyphicon-shopping-cart"></span></a>
+               </div>
+
+               <div class="col-xs-12 col-md-3 thumbnail text-center wow slideInLeft" data-wow-delay="0.5s">
+                  <figure>
+                     <img src="images/camisa-azul.png" alt="camisa rosa importada">
+                     <h4>Camisa rosa importada</h4>
+                     <p>camisa rosa argentina por um preço acessível e com pano de qualidade.</p>
+                  </figure>
+                  <a class="btn btn-default" href="#">R$190,00</a>
+                  <a class="btn btn-primary" href="#">Comprar <span class="glyphicon glyphicon-shopping-cart"></span></a>
+               </div>
+
+               <div class="col-xs-12 col-md-3 thumbnail text-center wow slideInLeft" data-wow-delay="0.5s">
+                  <figure>
+                     <img src="images/camisa-azul.png" alt="camisa rosa importada">
+                     <h4>Camisa rosa importada</h4>
+                     <p>camisa rosa argentina por um preço acessível e com pano de qualidade.</p>
+                  </figure>
+                  <a class="btn btn-default" href="#">R$190,00</a>
+                  <a class="btn btn-primary" href="#">Comprar <span class="glyphicon glyphicon-shopping-cart"></span></a>
+               </div>
+            </div> <!-- col-xs-12 col-sm-9 -->
+         </div> <!-- row -->
+      </div> <!-- container-fluid -->
 
       </main>
+
+      <footer>
+         <p>avenida paulista n1</p>
+         <p>tel: 2512-1234</p>
+      </footer>
+
+
       <script src="../bower_components/jquery/dist/jquery.min.js"></script>
       <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+      <script src="scripts/wow.min.js"></script>
+      <script>
+      $(function(){
+         new WOW().init();
+      });
+
+      </script>
    </body>
 </html>
